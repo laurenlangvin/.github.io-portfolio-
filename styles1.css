@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* General Styling */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Banner Section */
+.banner {
+  /*background: url(purp.png) center/cover no-repeat; */
+background-color:#fffbfb;
+text-align: center;
+
+    padding: 100px 20px;
+}
+
+.banner h1 {
+    font-size: 8em; /* Adjust the size as needed */
+    margin-bottom: 35px; /* Optional: adjust spacing below the heading */
+    color: #000000;
+}
+
+.banner p {
+    font-size: 1.2em;
+}
+
+.static-content {
+    background-color: #ededed;;
+}
+
+
+
+/*.contact-pic {
+    flex: 1 1;
+} */
+
+.contact-icon {
+    width: 30px; /* Adjust size of the icon */
+    height: 30px; /* Keeps icon proportions */
+    vertical-align: middle; /* Align with text */
+    margin: 0 8px; /* Add equal space on both sides */
+    
+}
+
+/*#email {
+    min-width: 50px;
+}*/
+
+
+.static-content {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgb(255, 254, 254);
+}
+
+.carousel {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel slides container */
+.slides {
+    display: flex;
+    width: 600%;
+    height: 100%;
+}
+
+/* Individual slide styling */
+.slide {
+    width: 16.666%;
+    transition: all 0.5s;
+}
+
+/* Image styling inside slides */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    position: absolute; /* Removes from normal document flow */
+    bottom: 20px; /* Positions 20px from bottom of carousel */
+    left: 50%; /* Moves to horizontal center */
+    transform: translateX(-50%); /* Centers the navigation dots */
+    display: flex; /* Arranges dots horizontally */
+    gap: 10px; /* Spaces between dots */
+    }
+
+
+
+/* Hide radio inputs for navigation */
+input[type="radio"] {
+    display: none;
+}
+
+
+   #slide1:checked ~ .slides { transform: translateX(0); }
+   #slide2:checked ~ .slides { transform: translateX(-16.666%); }
+   #slide3:checked ~ .slides { transform: translateX(-33.332%); } 
+   #slide4:checked ~ .slides { transform: translateX(-49.998%); }
+   #slide5:checked ~ .slides { transform: translateX(-66.664%); }
+   #slide6:checked ~ .slides { transform: translateX(-83.33%); }
+   #slide7:checked ~ .slides { transform: translateX(0); }
+   #slide8:checked ~ .slides { transform: translateX(-16.666%); }
+   #slide9:checked ~ .slides { transform: translateX(-33.332%); } 
+   #slide10:checked ~ .slides { transform: translateX(-49.998%); }
+   #slide11:checked ~ .slides { transform: translateX(-66.664%); }
+   #slide12:checked ~ .slides { transform: translateX(-83.33%); }
+
+
+
+   #slide1:checked ~ .navigation .nav-btn[for="slide1"],
+   #slide2:checked ~ .navigation .nav-btn[for="slide2"],
+   #slide3:checked ~ .navigation .nav-btn[for="slide3"],
+   #slide4:checked ~ .navigation .nav-btn[for="slide4"],
+   #slide5:checked ~ .navigation .nav-btn[for="slide5"],
+   #slide6:checked ~ .navigation .nav-btn[for="slide6"],
+   #slide7:checked ~ .navigation .nav-btn[for="slide7"],
+   #slide8:checked ~ .navigation .nav-btn[for="slide8"],
+   #slide9:checked ~ .navigation .nav-btn[for="slide9"],
+   #slide10:checked ~ .navigation .nav-btn[for="slide10"],
+   #slide11:checked ~ .navigation .nav-btn[for="slide11"],
+   #slide12:checked ~ .navigation .nav-btn[for="slide12"]  {
+    
+       background: hsl(247, 62%, 86%);
+   }
+
+
+   /* Recent Projects */
+.photos2 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.photogallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.photogallery img {
+    width: 25%;
+    
+}
+
+
+/* Style for the photo container */
+.photogallery {
+    display: flex;
+    gap: 20px;
+}
+
+
+.photo-item {
+    position: relative;  /* Ensures the overlay is positioned relative to the image */
+    width: 400px;        /* Increase the width of the container to make images bigger */
+    height: 300px;       /* Increase the height to make images bigger */
+    overflow: hidden;    /* Prevents the overlay from spilling out of the container */
+}
+
+.photo-item img {
+    width: 100%;         /* Ensures the image fills the container width */
+    height: 100%;        /* Ensures the image fills the container height */
+    object-fit: cover;   /* Ensures the image covers the entire area */
+    transition: opacity 0.3s ease; /* Optional: smooth transition for image opacity */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+    color: white;
+    font-size: 20px;   /* Adjust text size */
+    text-align: center;
+}
+
+/* Show overlay on hover */
+.photo-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Optional: Change image opacity on hover */
+.photo-item:hover img {
+    opacity: 0.7;  /* This will dim the image when hovered */
+}
+
+
+
+
+
+   h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* Description text styling */
+.section-description {
+    text-align: center;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+/* Section background colors */
+.carousel-section {
+    background-color: #ffffffee;
+    padding: 3rem 0;
+}
+
+/* Navigation dot buttons */
+.nav-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.about-me {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    align-items: center; /* Align items vertically */
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.grid-item.image img {
+    width: 100%;
+    max-width: 300px; /* Adjust based on your preference */
+    border-radius: 50%; /* Makes it circular */
+}
+
+.grid-item.text {
+    text-align: left;
+}
+
+
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 9999;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .btn {
+    background: hsl(247, 62%, 75%);
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.form-container .btn:hover {
+    background: hsl(247, 56%, 66%);
+}
+
+.form-container .cancel {
+    background: #ccc;
+}
+
+.form-container .cancel:hover {
+    background: #999;
+}
+
+.static-content {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.static-content button {
+    background: hsl(247, 62%, 75%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    
+}
+
+.static-content button:hover {
+    background: hsl(247, 56%, 66%);
+}
+
+.carousel-section{
+    background-color: #ededed;
+}
+
+.carousel-section2 {
+    background-color: #ffffff;
+    padding: 3rem
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: whitesmoke;
+    
+}
+
+.about-me p {
+    padding-block: 10px;
+    line-height: 1.6;
+}
+
+
+
+
+
+h2 {
+    font-style: italic;
+  }
+
+.static-content h2 {
+    font-size: 40px;
+    font-style: normal;
+    
+}
+
+.form-popup h2 {
+
+    font-style: normal;
+}
+
+.static-content p {
+    font-size: 19px;
+  
+}
+
+a:hover {
+    color: hsl(247, 56%, 66%); /* Changes text color when hovered */
+  }
+ 
+
+    .grid-item.text {
+        text-align: center;
+    }
+
+
+
+   
+    @media (max-width: 549px) {
+        .banner h1 {
+            font-size: 80px;
+        }
+    }
+
+    @media (max-width: 549px) {
+        h2{
+            font-size: 40px;
+        }
+    }
+
+  @media (min-width: 549px){
+    .row {
+        display: inline-block;
+    }
+  }
+
+  a {
+    color: #000000;
+  }
+
+
+  /* Sticky Menu Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: hsl(247, 56%, 66%);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        gap: 1rem;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+.carousel-section {
+    display: none;
+}
+
+.about-me {
+    display: none;
+}
+
+.static-content {
+    background-color: #ededed;;
+}
+
+.photos2 {
+    padding-top: 100px;
+    padding-bottom: 100px; /* Adds space below the photography section */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #000000;
+    color: whitesmoke;
+    margin-top: 30px; /* Adds space above the footer */
+}
+
+.carousel-section2 {
+    padding-bottom: 100px;
+}
+.photos2 h2 {
+    padding-bottom: 50px;
+}
+
+/* Add margin to button */
+.static-content button {
+    margin-top: -20px;  /* Adjust the value as needed */
+}
+
+.photogallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+    gap: 0.5rem; /* Reduced gap to bring items closer together */
+    justify-items: center; /* Centers the items horizontally */
+    max-width: 100%; /* Ensure the gallery width is fluid */
+    margin: 0 auto; /* Centers the gallery on the page */
+}
+/* Media query to stack the images in one column on smaller screens */
+@media (max-width: 768px) {
+    .photogallery {
+        grid-template-columns: 1fr; /* Stack all images in 1 column */
+    }
+}
