@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren Langvin Portfolio</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <!--Sticky Navigation Bar-->
+    <nav class="navbar">
+        <a href="index.html" class="logo">PORTFOLIO</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="nav-links" id="navlinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
+
+
+
+
+
+    <header class="banner">
+        <h1>LAUREN LANGVIN</h1>
+        <div class="contact-info"> 
+           <div class="row"> <img src="images/icons/emailicon.png" alt="Email" class="contact-icon"> <a href="mailto:lelangvin5@gmail.com" target="_blank">lelangvin5@gmail.com</a>  </div>
+         <div class="row"> <img src="images/icons/phoneicon.png" alt="Phone" class="contact-icon">  <a href="tel:+19712708033" target="_blank"> 971-270-8033</a>   </div> 
+          <div class="row"> <img src="images/icons/linkedinicon.png" alt="LinkedIn" class="contact-icon"> <a href="https://www.linkedin.com/in/lauren-langvin-729689226/" target="_blank">LinkedIn</a> </div>
+        </div>
+    </header>
+
+    <section class="static-content">
+        <h2>Welcome to my portfolio</h2>
+        <p>A collection of photography and graphic design</p>
+    </section>
+    <section class="static-content">
+        
+        <button onclick="document.getElementById('signup-form').style.display='block'">Contact Me</button>
+
+        <div id="signup-form" class="form-popup">
+            <form class="form-container">
+                <h2>Contact Me</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="fullname" placeholder="Enter Your Name" required>
+
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" name="email" placeholder="Enter Your Email" required>
+
+                <button type="submit" class="btn submit-btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="document.getElementById('signup-form').style.display='none'">Close</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Photography Carousel -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2>Photography</h2>
+            <p class="section-description">Film taken on a Canon AF35mm</p>
+
+            <div class="carousel">
+               <input type="radio" name="slide" id="slide1">
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+                <input type="radio" name="slide" id="slide5">
+                <input type="radio" name="slide" id="slide6">
+
+                <div class="slides">
+                    <div class="slide"><img src="images/photo1/bird.JPG" alt="Oregon Coast"></div>
+                    <div class="slide"><img src="images/photo1/cloud.JPG" alt="Clouds"></div>
+                    <div class="slide"><img src="images/photo1/coast.JPG" alt="Oregon Coast"></div>
+                    <div class="slide"><img src="images/photo1/ed.JPG" alt="God’s Thumb"></div>
+                    <div class="slide"><img src="images/photo1/flower.JPG" alt="Flower"></div>
+                    <div class="slide"><img src="images/photo1/sand.JPG" alt="Oregon Coast"></div>
+                </div>
+
+                <div class="navigation">
+                    <label class="nav-btn" for="slide1"></label>
+                    <label class="nav-btn" for="slide2"></label>
+                    <label class="nav-btn" for="slide3"></label>
+                    <label class="nav-btn" for="slide4"></label>
+                    <label class="nav-btn" for="slide5"></label>
+                    <label class="nav-btn" for="slide6"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graphic Design Carousel -->
+    <section class="carousel-section2">
+        <div class="container">
+            <h2>Graphic Design</h2>
+            <p class="section-description">Created in Photoshop and Illustrator</p>
+
+            <div class="carousel">
+                <input type="radio" name="slide" id="slide7">
+                <input type="radio" name="slide" id="slide8">
+                <input type="radio" name="slide" id="slide9">
+                <input type="radio" name="slide" id="slide10">
+                <input type="radio" name="slide" id="slide11">
+                <input type="radio" name="slide" id="slide12">
+
+                <div class="slides">
+                    <div class="slide"><img src="images/gd/as.png" alt="Assistance League"></div>
+                    <div class="slide"><img src="images/gd/asposter.png" alt="Assistance League Poster"></div>
+                    <div class="slide"><img src="images/gd/depop.png" alt="Depop Poster"></div>
+                    <div class="slide"><img src="images/gd/tent.png" alt="Sol Blume poster"></div>
+                    <div class="slide"><img src="images/gd/solblume.png" alt="Sol Blume Instagram post"></div>
+                    <div class="slide"><img src="images/gd/sb8.png" alt="Poster Mockup"></div>
+                </div>
+
+                <div class="navigation">
+                    <label class="nav-btn" for="slide7"></label>
+                    <label class="nav-btn" for="slide8"></label>
+                    <label class="nav-btn" for="slide9"></label>
+                    <label class="nav-btn" for="slide10"></label>
+                    <label class="nav-btn" for="slide11"></label>
+                    <label class="nav-btn" for="slide12"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section class="photos2">
+        <h2>Photography</h2>
+        <div class="photogallery">
+            <div class="photo-item">
+                <img src="images/photo1/bird.JPG" alt="bird">
+                <div class="overlay">
+                    <p>Cannon Beach, OR</p>
+                </div>
+            </div>
+            <div class="photo-item">
+                <img src="images/photo1/sand.JPG" alt="sand">
+                <div class="overlay">
+                    <p>Cannon Beach, OR</p>
+                </div>
+            </div>
+            <div class="photo-item">
+                <img src="images/photo1/cloud.JPG" alt="cloud">
+                <div class="overlay">
+                    <p>Portland, OR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Me Section 
+    <section class="about-me">
+        <h2>About Me</h2>
+        <div class="grid-container">
+            <div class="grid-item image">
+                <img src="images/lauren.png" alt="Profile Picture">
+            </div>
+            <div class="grid-item text">
+                <h3>My Life</h3>
+                <p>I'm an advertising major with a strong background in graphic design, content creation, and photography. I am experienced in Adobe Creative Suite with a growing skill set in web development. In my free time, I love to spend time with my animals, take pictues and go on adventures.</p>
+            </div>
+        </div>
+    </section> -->
+
+   
+    <footer>
+        <p>&copy; 2025 Lauren Langvin. All Rights Reserved.</p>
+    </footer>
+
+    <script>function toggleMenu() {
+        const navLinks = document.getElementById("navlinks");
+        navLinks.classList.toggle("active");
+    }</script>
+    
+
+</body>
+</html>
+
