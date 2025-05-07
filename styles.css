@@ -214,14 +214,14 @@ footer {
 
 
 
-  @media screen and (max-width: 576px) {
+/*  @media screen and (max-width: 576px) {
     body {
     background-color: rgb(243, 170, 234);
     background-image: radial-gradient(whitesmoke, rgb(242, 170, 243))
     }
     nav {
     display: none;
-    }
+    } */
     }
   
     @media (min-width: 549px){
